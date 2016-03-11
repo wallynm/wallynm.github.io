@@ -1,62 +1,39 @@
-<body  background="images/bg.jpg">
-	<head>
-    	<title>Web Gaming Site</title>
-	</head>
-	<font face="verdana">
-		<table bgcolor="#B7B7B7" width="800" cellspacing="5" align="center">
-			<tr>
-				<td bgcolor="#EAEAEA" colspan="3"><a href="index.html"><img src="images/header.png" width="800"></a></td>
-			</tr>
-			<tr>
-				<td bgcolor="#EAEAEA" rowspan="2" width="33%" valign="top" style="padding: 10px;">
-					<h3>Lista de jogos eletrônicos mais vendidos</h3>
-					<ul>
-						<li>1: Wii Sports (Wii - 81.9 milhões)</li>
-						<li>2: Super Mario Bros. - (NES - 40.24 milhões)</li>
-						<li>3: Mario Kart Wii - (Wii - 34.33 milhões)</li>
-						<li>4: Wii Sports Resort - (Wii - 32.24 milhões)</li>
-						<li>5: Pokémon Red e Blue - /Green (GB - 31.37 milhões)</li>
-						<li>6: Tetris - (GB - 30.26 milhões)</li>
-						<li>7: New Super Mario Bros. - (DS - 29.38 milhões)</li>
-						<li>8: Wii Play - (Wii - 28.79 milhões)</li>
-						<li>9: Duck Hunt - (NES - 28.31 milhões)</li>
-						<li>10: New Super Mario Bros. Wii - (Wii - 27.25 milhões)</li>
-					</ul>
-				</td>
-				<td bgcolor="#EAEAEA" rowspan="2" width="33%" style="padding: 10px;">
-				<h3>Mercado de jogos eletrônicos cresce no Brasil e gera empregos na área</h3>
-				<p>
-					O Brasil é o país onde o mercado de jogos eletrônicos mais cresceu em 2012. As vendas movimentaram R$ 1,6 bilhão, crescimento de 60% em relação a 2011. Além disso, o país é o quarto maior consumidor de jogos do mundo. Com esse mercado, as previsões para quem trabalha na área também são animadoras.
-					<br/><br/>
-					A estimativa é que o mercado de trabalho na área de games cresça 13,5% nos próximos cinco anos. Segundo a Abragames (Associação Brasileira de Desenvolvedores de Jogos Digitais), as funções mais procuradas são designers e programadores de jogos para redes sociais e plataformas móveis, como celulares e computadores portáteis.<br/><br/>
+---
+layout: default
+title: Home
+---
 
-					Nesta área, 80% dos profissionais empregados têm nível superior, mas essa não é a principal exigência. O que é o mercado mais precisa é de profissionais com experiência.<br/><br/>
-
-					Na Escola Politécnica da Universidade de São Paulo, engenheiros doutores criam jogos para ensinar trabalhadores. “Nosso objetivo é focar em tecnologias de simulação e visualização 3D. É uma espécie de games para aplicações sérias e importantes na sociedade, principalmente relacionadas ao trabalho e às atividades essenciais da vida humana que pode ter algum risco”, explica Marcelo Zuffo, professor da USP...<br/><br/>
-
-					<a href="http://g1.globo.com/jornal-hoje/noticia/2013/07/mercado-de-jogos-eletronicos-cresce-no-brasil-e-gera-empregos-na-area.html">Leia a matéria completa</a>
-				</p>
-				</td>
-				<td bgcolor="#F5F5F5" width="33%" valign="top" style="padding: 10px;">
-					<h3>Matérias: </h3>
-					- <a href="index.html">Mercado de jogos eletrônicos cresce no Brasil e gera empregos na área</a>
-					<br/><br/>
-					- <a href="page1.html">Tendência: jogos de alta qualidade via navegador</a>
-					<br/><br/>
-					- <a href="page2.html">Guia de sobrevivência do desenvolver indie de games</a>
-				</td>
-			</tr>
-			
-			<tr>
-				<td bgcolor="#000" align="center"><img src="images/side-img.png" width="200"></td>
-			</tr>
-			
-			<tr>
-				<td bgcolor="#B7B7B7" colspan="3">
-					Primeiro website<br/>
-					Construção Table/Website
-				</td>
-			</tr>
-		</table>
-	</font>
-</body>
+<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
+	{% include top.html %}
+	<div id="home-title">
+		<a href="{{ site.url }}">
+			<img src="{{ site.icon }}" class="site-icon">
+		</a>
+	</div>
+</header>
+<div id="post-list">
+	{% for post in paginator.posts %}
+		<div>
+			<span class="post-date">{{ post.date | date_to_long_string }}</span>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<p class="post-description">{{ post.content | strip_html | truncatewords: 50 }}</p>
+		</div>
+		<br>
+	{% endfor %}
+</div>
+<nav class="pagination" role="navigation">
+	{% if paginator.next_page %}
+		<a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+	{% endif %}
+	<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+	{% if paginator.previous_page %}
+		{% if paginator.page == 2 %}
+			<a class="older-posts" href="/">Newer posts &rarr;</a>
+		{% else %}
+			<a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+		{% endif %}
+	{% endif %}
+</nav>
+<footer class="clean" style="background-image: url({{ site.cover }}); background-position: bottom; height: 60px;">
+	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
+</footer>
