@@ -9854,6 +9854,8 @@ $(document).ready(function() {
 		timeout = setTimeout(function(){
 			$el.removeClass('ripple-out');
 		}, 600);
+
+		e.preventDefault();
 	})
 })
 
