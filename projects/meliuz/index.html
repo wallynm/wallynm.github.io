@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="public/js/main.js"></script>
+  <link rel="stylesheet" href="public/css/import.css">
+  <title>Meliuz</title>
+</head>
+	<body>
+		<div class="container">
+		  <div class="autocomplete center">
+		    <input type="text" placeholder="Procure por uma banda" />
+		    <ul class="matches"></ul>
+		  </div>
+
+  		<ul class="album-listing"></ul>
+  		<div class="loading-area" style="width: 180px; margin: 20px auto;">
+	  		<div id="loadmore" class="btn btn-primary radius large" style="display: none;">LOAD MORE</div>
+  		</div>
+		</div>
+
+		<div class="modal" id="album-detail" aria-hidden="true">
+			<div class="backdrop" aria-hidden="true"></div>
+		  <div class="modal-dialog">
+		    <a href="#close" class="btn-close" aria-hidden="true"></a>
+
+		    <div class="modal-body">
+	  			<div class="album-detail clearfix">
+	  				<div class="album-image">
+							<img src="">
+	  				</div>
+	  				<div class="detail">
+		  				<div class="album-artist"></div>
+		  				<div class="album-title"></div>
+		  				<div class="album-year"></div>
+		  				<div class="album-info"></div>
+	  				</div>
+	  			</div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+@radius: 10px;
+
+.modal-dialog{	
+	.album-detail{
+		.flex-display();
+		padding: 40px;
+		.album-image{
+			img{
+				width: 100%;
+			}
+    	flex-shrink: 0;
+			width: 200px;
+			height: 200px;
+		}
+
+		.detail{
+      flex: 1 auto;
+			padding-left: 20px;
+			.album-title{
+				font-size: 38px;
+				font-weight: lighter;
+			}
+			.album-artist{
+				color: #9b9b9b;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.album-year{
+				color: #9b9b9b;
+				font-size: 14px;
+			}
+			.album-info{
+		    padding-top: 20px;
+			}
+		}
+	}
+}
+
+.album-listing{
+	margin: 0px;
+	padding: 0px;
+	border-radius: @radius;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+
+	.album{
+		padding: 20px;
+		list-style: none;
+		margin: 0px;
+		background: #fff;
+		border-bottom: 1px solid #dadada;
+		.flex-display();
+
+		&:hover{
+			background: #edf4fd;
+		}
+
+		.album-image{
+			img{
+				width: 100%;
+			}
+    	flex-shrink: 0;			
+			width: 80px;
+			height: 80px;
+		}
+		.album-title{
+			font-size: 22px;
+	    padding: 25px 0px;
+      padding-left: 20px;
+      flex: 1 auto;
+		}
+		.album-year{
+	    padding: 29px 0;
+	    width: 45px;
+	    flex-shrink: 0;
+	    text-align: right;
+		}
+		&:first-child{
+			border-top-left-radius: @radius;
+			border-top-right-radius: @radius;
+		}
+		&:last-child{
+			border-bottom-left-radius: @radius;
+			border-bottom-right-radius: @radius;
+			border-bottom: 0px;
+		}		
+	}
+}

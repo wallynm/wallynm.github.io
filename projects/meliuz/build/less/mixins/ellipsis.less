@@ -1,0 +1,9 @@
+// Crop single line text
+.ellipsis(@width:0) {
+  & when not(@width = 0) {
+    width: @width;
+  }
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
