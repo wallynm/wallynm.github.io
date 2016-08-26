@@ -1,0 +1,142 @@
+.section-mosaic{
+  position: relative;
+  background: url(../images/bg-mosaic.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+  .container-title {
+    padding: 100px 0;
+  }
+
+  .container-title h5{
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  .container-title h2{
+    font-weight: bold;
+    color: #05c7ff;
+    line-height: 22px;
+  }
+
+  .block-area{
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .block-red{
+    background: #ff0900;
+  }
+
+  .block-black{
+    background: #001526;
+  }
+
+  .block-blue{
+    background: #00ccff;
+  }
+
+  .block-class{
+    width: 280px;
+    height: 280px;
+    float: left;
+  }
+
+  .block-class img{
+    width: 100%;
+  }
+
+
+  .block-class span{
+    width: 175px;
+    font-weight: bold;
+    display: block;
+    color: #FFF;
+    font-size: 26px;
+    margin: 20px;
+  }
+
+  .fixed-width-390{
+    text-align: right;
+    width: 390px !important;
+    margin-left: -140px;
+  }
+
+  .footer-section{
+    text-align: center;
+    color: #FFF;
+    padding: 0 200px;
+    padding-bottom: 120px;
+
+    img{
+      padding: 50px 0px;
+    }
+    h3{
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+    p{
+      font-weight: lighter;
+    }
+  }
+}
+
+
+@media only screen and (max-width : 1200px) {
+  .block-area{
+    max-width: 930px !important;
+  }
+
+  .block-class {
+    width: 310px !important;
+    height: 310px !important;
+  }
+  .block-md-hidden{
+    display: none;
+  }
+  .block-md-left.block-class{
+    float: right;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .footer-section{
+    padding: 30px !important;
+    padding-bottom: 80px !important;
+  }  
+  .block-class{
+    width: 240px !important;
+    height: 240px !important;
+  }
+  .block-class span{
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width : 766px) {
+  .block-md-left.block-class{
+    float: left;
+  }
+  .block-area{
+    max-width: 100%;
+  }
+  .block-class{
+    width: 33% !important;
+    height: initial !important;
+  }
+  .block-class:not(.block-image){
+    display: none;
+  }
+  .fixed-width-390{
+    margin-left: -165px;
+  }
+}
+
+
+@media only screen and (max-width : 480px) {
+  .block-class:last-child{
+    display: none;
+  }
+  .block-class{
+    width: 50% !important;
+  }
+}

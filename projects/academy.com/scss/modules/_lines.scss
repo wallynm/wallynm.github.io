@@ -1,0 +1,25 @@
+.section-lines{
+  background: #3e2c2c;
+  color: #FFF;
+
+  &:after{
+    background: url('../images/itersection-brown-bg.png');
+  }
+  h2{
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .row{
+    padding: 100px 0;
+  }
+  .col-md-6{
+    padding-left: 100px;
+  }
+}
+
+
+@media only screen and (max-width : 992px) {
+  .col-md-6{
+    padding-left: 0px !important;
+  }
+}

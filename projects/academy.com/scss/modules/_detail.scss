@@ -1,0 +1,18 @@
+.section-detail {
+  position: relative;
+  &:after{
+    background: url('../images/itersection-white-bg.png');
+  }
+
+  text-align: center;
+  color: #b5b5b5;
+  .block-detail{
+    padding: 70px;
+  }
+
+  h4{
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding: 30px 0;
+  }
+}

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Academy</title>
+
+    <link href="css/academy.css" rel="stylesheet">
+  </head>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(argument) {
+    $(".section-header" ).load( "_header.html" );
+    $(".section-detail" ).load( "_section-detail.html" );
+    $(".section-lines" ).load( "_section-lines.html" );
+    $(".section-mosaic" ).load( "_section-mosaic.html" );
+  })
+  </script>
+  
+  <body>
+    <section class="section-header"></section>
+    <section class="section-detail"></section>
+    <section class="section-lines"></section>
+    <section class="section-mosaic"></section>
+    <hr class="featurette-divider">
+
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </body>
+</html>

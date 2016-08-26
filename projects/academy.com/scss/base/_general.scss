@@ -1,0 +1,56 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  overflow-y: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $default-font;
+  color: $default-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p {
+  margin: 0 0 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+a {
+  color: $featured-color;
+
+  &:visited {
+    color: $featured-color;
+  }
+  &:visited,
+  &:hover {
+    outline: none;
+  }
+}
+small {
+  font-size: 85%;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+section{
+  position: relative;
+  &:after{
+    content: '';
+    width: 67px;
+    height: 26px;
+    background: url('../images/itersection-white-bg.png');
+    left: 50%;
+    margin-left: -33px;
+    position: absolute;
+    z-index: 1;
+  }
+}

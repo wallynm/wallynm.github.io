@@ -1,0 +1,32 @@
+.section-header{
+  &:after{
+    background: url('../images/itersection-black-bg.png');
+  }
+}
+
+.header {
+  height: 680px;
+  background: #020F1B url('../images/bg-header.jpg');
+
+  .navbar.navbar-static-top{
+    background: transparent;
+    border: 0px;
+    li{
+      a, a:hover, a:active{
+        background: transparent;
+        color: #FFF;
+      }
+
+      &.active{
+        a{
+          color: #00ccff !important;
+          font-weight: bolder;  
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    padding: 8px;
+  }
+}
